@@ -3,6 +3,16 @@ package models;
 public class Usuario {
 
     private String Nombre;
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "Nombre='" + Nombre + '\'' +
+                ", Apellido='" + Apellido + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
+
     private String Apellido;
     private  int edad ;
 

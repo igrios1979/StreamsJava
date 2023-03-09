@@ -2,24 +2,22 @@ package models;
 
 public class Usuario {
 
+
+
+    private Integer id;
     private String Nombre;
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "Nombre='" + Nombre + '\'' +
-                ", Apellido='" + Apellido + '\'' +
-                ", edad=" + edad +
-                '}';
-    }
-
     private String Apellido;
     private  int edad ;
+    private static int ultimoId;
+
+
+
 
     public Usuario(String nombre, String apellido, int edad) {
         Nombre = nombre;
         Apellido = apellido;
         this.edad = edad;
+        this.id = ++ultimoId;
     }
 
     public String getNombre() {
@@ -45,4 +43,25 @@ public class Usuario {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return
+               "" + Nombre +" "+Apellido + " "+edad ;
+
+    }
+
+
+
+
 }

@@ -15,7 +15,7 @@ public class EjemploOperadorFilterSingle2 {
                 .of("Pato fontanet","Paco Delucia","lucho ibañez","lucho gatica","ignacio Rios","Elton john")
                 .map(nombre -> new Usuario(nombre.split(" ")[0],nombre.split(" ")[1],0))
                 .peek(System.out::println)
-                .anyMatch(u->u.getId().equals(1));
+                .anyMatch(u->u.getId().equals(2));
 
 
 
@@ -24,8 +24,10 @@ public class EjemploOperadorFilterSingle2 {
 
         //ejemplo lo mismo pero con lista y for
 
-        List<Usuario> lista = Arrays.asList(new Usuario("juan", "pereyra",23),
-                                            new Usuario("pepe", "basualdo",56) );
+        List<Usuario> lista = Arrays.asList(new Usuario("Pato", "fontanet",23),
+                                            new Usuario("Paco", "Delucia",56),
+                                            new Usuario("lucho", "ibañez",56),
+                                            new Usuario("lucho", "gatica",56));
 
         boolean resul = false;
 

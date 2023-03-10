@@ -50,3 +50,8 @@ get(): Este método devuelve el valor almacenado en el objeto Optional si existe
 Además de estos métodos, Optional también proporciona otros métodos como orElse(), orElseGet(), orElseThrow() y map() que se utilizan para acceder al valor del objeto Optional.
 
 La API Optional se utiliza comúnmente para mejorar la legibilidad del código y evitar excepciones de tipo NullPointerException en los casos en que los valores pueden ser nulos. Al utilizar la clase Optional, se puede escribir un código más claro y fácil de leer que indica claramente cuando un valor puede ser nulo y cómo se debe tratar en caso de que sea nulo.
+
+---------------------------------------------------------------------
+En Java, la función reduce se utiliza para realizar una operación de reducción en una secuencia de elementos. La operación de reducción toma una función binaria y la aplica acumulativamente a todos los elementos de la secuencia para producir un resultado único.
+
+La sintaxis básica de la función reduce en Java es la siguiente:

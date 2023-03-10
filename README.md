@@ -32,3 +32,21 @@ Copy code
 Stream<Integer> numeros = Stream.of(1, 2, 3, 4, 5);
 Integer[] arregloNumeros = numeros.toArray(Integer[]::new);
 Estos son solo algunos de los operadores terminales más comunes en Java Streams. Existen muchos otros operadores terminales que se pueden utilizar según las necesidades específicas del programa.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+La clase Optional es una API de Java que se introdujo en Java 8 para abordar el problema de los valores nulos (null values) en las aplicaciones. Es una clase que representa un objeto que puede contener un valor nulo o no nulo. Esta API se puede utilizar en cualquier lugar donde se necesite una referencia a un objeto que podría ser nulo.
+
+La API Optional de Java proporciona un mecanismo para evitar excepciones de tipo NullPointerException. En lugar de devolver un valor nulo, los métodos que utilizan Optional devuelven un objeto Optional vacío o un objeto Optional que contiene un valor no nulo.
+
+La clase Optional tiene dos métodos principales:
+
+isPresent(): Este método devuelve true si el objeto Optional contiene un valor no nulo y false en caso contrario.
+
+get(): Este método devuelve el valor almacenado en el objeto Optional si existe. Si el objeto Optional está vacío, el método lanza una excepción de tipo NoSuchElementException.
+
+Además de estos métodos, Optional también proporciona otros métodos como orElse(), orElseGet(), orElseThrow() y map() que se utilizan para acceder al valor del objeto Optional.
+
+La API Optional se utiliza comúnmente para mejorar la legibilidad del código y evitar excepciones de tipo NullPointerException en los casos en que los valores pueden ser nulos. Al utilizar la clase Optional, se puede escribir un código más claro y fácil de leer que indica claramente cuando un valor puede ser nulo y cómo se debe tratar en caso de que sea nulo.

@@ -11,15 +11,16 @@ public class EjemploOperadorFilterSingle2 {
 
     public static void main(String[] args) {
 
-        boolean existe = Stream
+        Usuario usuario = Stream
                 .of("Pato fontanet","Paco Delucia","lucho ibañez","lucho gatica","ignacio Rios","Elton john")
                 .map(nombre -> new Usuario(nombre.split(" ")[0],nombre.split(" ")[1],0))
                 .peek(System.out::println)
-                .anyMatch(u->u.getId().equals(2));
+                .filter(u->u.getId().equals(4))
+                .findFirst().orElseGet(()->new Usuario("nadie","nadie",3));
 
 
 
-        System.out.println(existe);
+        System.out.println(usuario);
 
 
         //ejemplo lo mismo pero con lista y for

@@ -54,4 +54,26 @@ La API Optional se utiliza comúnmente para mejorar la legibilidad del código y
 ---------------------------------------------------------------------
 En Java, la función reduce se utiliza para realizar una operación de reducción en una secuencia de elementos. La operación de reducción toma una función binaria y la aplica acumulativamente a todos los elementos de la secuencia para producir un resultado único.
 
-La sintaxis básica de la función reduce en Java es la siguiente:
+
+
+---------------------------------------------------------------------------
+
+```IntStream es una interfaz de Java 8 que proporciona una secuencia de valores enteros primitivos. Forma parte de la API de Streams de Java y proporciona un conjunto de métodos para crear y manipular secuencias de valores enteros.
+
+IntStream proporciona una variedad de métodos para crear secuencias de valores enteros, como range(), rangeClosed(), iterate() y generate(). También proporciona una variedad de métodos para filtrar, mapear y reducir los elementos de la secuencia.
+
+Algunos de los métodos comúnmente utilizados de IntStream son:
+
+filter(IntPredicate predicate): Devuelve una secuencia que consiste en los elementos que cumplen el predicado dado.
+map(IntUnaryOperator mapper): Devuelve una secuencia que consiste en los resultados de aplicar la función dada a los elementos de esta secuencia.
+sum(): Devuelve la suma de los elementos en esta secuencia.
+average(): Devuelve un OptionalDouble que describe la media aritmética de los elementos de esta secuencia, o un Optional vacío si esta secuencia está vacía.
+reduce(int identity, IntBinaryOperator op): Devuelve el resultado de la acumulación de los elementos de esta secuencia utilizando el identificador y el operador dados.
+IntStream se puede obtener a partir de una matriz de enteros, una Collection de enteros o mediante el uso de uno de los métodos de fábrica proporcionados por la interfaz IntStream.
+
+IntStream está diseñado para trabajar con enteros primitivos y está optimizado para el rendimiento. Evita los costos de auto-encajonamiento y desencajonamiento, lo que lo hace más eficiente que trabajar con secuencias de objetos.```
+
+
+
+
+

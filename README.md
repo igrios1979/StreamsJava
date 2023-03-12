@@ -58,7 +58,7 @@ En Java, la función reduce se utiliza para realizar una operación de reducció
 
 ---------------------------------------------------------------------------
 
-```IntStream es una interfaz de Java 8 que proporciona una secuencia de valores enteros primitivos. Forma parte de la API de Streams de Java y proporciona un conjunto de métodos para crear y manipular secuencias de valores enteros.
+**IntStream** es una interfaz de **Java 8** que proporciona una secuencia de valores enteros primitivos. Forma parte de la API de Streams de Java y proporciona un conjunto de métodos para crear y manipular secuencias de valores enteros.
 
 IntStream proporciona una variedad de métodos para crear secuencias de valores enteros, como range(), rangeClosed(), iterate() y generate(). También proporciona una variedad de métodos para filtrar, mapear y reducir los elementos de la secuencia.
 

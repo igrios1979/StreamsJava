@@ -1,5 +1,46 @@
+## Streams
+
+En Java, un ***Stream*** es una secuencia de elementos que se puede procesar de manera secuencial o paralela. Los elementos pueden ser de cualquier tipo, incluidos tipos primitivos y objetos.
+
+Los **Streams** proporcionan una manera fácil de realizar operaciones de procesamiento de datos como ***filtrado, mapeo, ordenamiento y reducción en una colección de elementos***. Además, al utilizar Streams, podemos aprovechar la paralelización del procesamiento de datos para mejorar el rendimiento de nuestras aplicaciones.
+
+Para trabajar con ***Streams en Java, primero debemos tener una fuente de datos, como una colección o un array***, desde la cual se pueda crear un Stream. A continuación, podemos encadenar diferentes operaciones de Streams para procesar los elementos de la fuente de datos.
+
+***Hay dos tipos de Streams en Java: los Streams de objetos y los Streams de tipos primitivos***. Los Streams de ***objetos*** se pueden utilizar con cualquier tipo de objeto, mientras que los Streams de **tipos primitivos** se utilizan con tipos primitivos como int, long y double para evitar el costo de ***envoltorio y desenvoltorio*** de los objetos de envoltorio equivalentes.
+
+Algunos ejemplos de operaciones de Streams en Java incluyen filter() para filtrar elementos basados en una condición, map() para transformar cada elemento de una secuencia en otro objeto, sorted() para ordenar los elementos de una secuencia y reduce() para combinar todos los elementos de una secuencia en un solo resultado.
+
+En resumen, ***los Streams en Java son una poderosa*** herramienta para procesar y manipular colecciones de elementos de manera eficiente y fácil de leer.
 
 
+-------------------------------------------------------------------------------------------
+
+## Algunos de los métodos principales de la API de Streams en Java:
+
+-   `**filter(Predicate<T> predicate)**`: filtra los elementos de un Stream según una condición especificada por un objeto Predicate.
+
+-   `**map(Function<T, R> mapper)`**: transforma los elementos de un Stream aplicando una función especificada por un objeto Function.
+
+-   **`flatMap(Function<T, Stream<R>> mapper)**`: transforma cada elemento de un Stream en un nuevo Stream y luego los combina en un único Stream.
+
+-   **`sorted(Comparator<T> comparator)`:** ordena los elementos de un Stream utilizando un objeto Comparator.
+
+-   **`distinct()`**: elimina los elementos duplicados de un Stream.
+
+**-   `limit(long maxSize)`**: limita el número de elementos en un Stream a un tamaño máximo especificado.
+
+**-   `skip(long n)`:** omite los primeros n elementos de un Stream.
+
+-   **`forEach(Consumer<T> action)`:** ejecuta una acción especificada por un objeto Consumer para cada elemento de un Stream.
+
+-   **`**reduce(T identity, BinaryOperator<T> accumulator)`:**** combina todos los elementos de un Stream utilizando una operación de reducción especificada por un objeto BinaryOperator y un valor inicial especificado por un objeto identity.
+
+-   **`collect(Collector<T, A, R> collector)`:** recolecta los elementos de un Stream en una colección o en otro objeto utilizando un objeto Collector.
+
+
+Estos son solo algunos de los métodos más comunes que se utilizan en la API de Streams en Java. Hay muchos más métodos disponibles, incluidos algunos para Streams primitivos y para operaciones de paralelización. Espero que esto te sea de ayuda.
+
+----------------------------------------------------------------------------------------
 En Java, un ***Stream*** es una secuencia de elementos que se puede procesar de manera secuencial o paralela. Los elementos pueden ser de cualquier tipo, incluidos tipos primitivos y objetos.
 
 Los **Streams** proporcionan una manera fácil de realizar operaciones de procesamiento de datos como ***filtrado, mapeo, ordenamiento y reducción en una colección de elementos***. Además, al utilizar Streams, podemos aprovechar la paralelización del procesamiento de datos para mejorar el rendimiento de nuestras aplicaciones.

@@ -144,3 +144,40 @@ En este ejemplo, hemos creado una secuencia de valores primitivos de tipo int ut
 
 
 
+En Java, **`flatMap`** es un método de la interfaz `**Stream`** que permite transformar cada elemento de un flujo en otro flujo, y luego fusionar todos los flujos resultantes en uno solo.
+
+El método **`flatMap`** recibe una función que toma un elemento del flujo y devuelve un nuevo flujo de cero o más elementos. Luego, `flatMap` fusiona todos los flujos resultantes en uno solo. El resultado es un nuevo flujo que contiene todos los elementos de los flujos resultantes.
+
+La firma del método **`flatMap`** en Java es la siguiente:
+
+
+
+    `<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)` 
+
+***
+
+## Donde:
+
+***
+
+-   `T` es el tipo de elemento del flujo de origen.
+-   `R` es el tipo de elemento del nuevo flujo resultante.
+-   `mapper` es una función que toma un elemento del flujo de origen y devuelve un flujo de cero o más elementos del tipo `R`.
+
+Por ejemplo, supongamos que tenemos un `Stream` de `List<Integer>`. Podríamos usar `flatMap` para obtener un `Stream` que contenga todos los elementos de todas las listas:
+
+javaCopy code
+
+    `List<List<Integer>> listas = Arrays.asList(
+        Arrays.asList(1, 2),
+        Arrays.asList(3, 4),
+        Arrays.asList(5, 6)
+    );
+    
+    Stream<Integer> stream = listas.stream()
+            .flatMap(lista -> lista.stream())
+            .sorted();
+            
+    stream.forEach(System.out::println); // imprime: 1 2 3 4 5 6` 
+
+En este ejemplo, usamos `**flatMap**` para transformar cada lista en un flujo de sus elementos, y luego fusionamos todos los flujos resultantes en uno solo. Luego, ordenamos los elementos del flujo resultante y los imprimimos en la consola.

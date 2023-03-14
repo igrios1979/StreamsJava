@@ -8,7 +8,7 @@ public class EjemploOperadorReduceIntRangos {
 
     public static void main(String[] args) {
 
-        IntStream numerous = IntStream.range(1,11)
+        IntStream numerous = IntStream.rangeClosed(1,11)
                 .peek(System.out::println);
 
         // int resultadosuma = numerous.reduce(0,Integer::sum);

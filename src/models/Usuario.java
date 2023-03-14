@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Usuario {
 
 
@@ -57,11 +59,21 @@ public class Usuario {
     @Override
     public String toString() {
         return
-               "" + Nombre +" "+Apellido + " "+edad ;
+               "" +Nombre +" "+Apellido+" "+edad ;
 
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Usuario)) return false;
+        Usuario usuario = (Usuario) o;
+        return edad == usuario.edad && Nombre.equals(usuario.Nombre) && Apellido.equals(usuario.Apellido);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(Nombre, Apellido, edad);
+    }
 }

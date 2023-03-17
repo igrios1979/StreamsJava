@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Usuario {
@@ -11,15 +13,24 @@ public class Usuario {
     private String Apellido;
     private  int edad ;
     private static int ultimoId;
+    private List<Factura> facturas;
 
 
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
 
+    public void addFactura(Factura factura) {
+        this.facturas.add(factura);
+        factura.setUsuariofactura(this);
+    }
 
     public Usuario(String nombre, String apellido, int edad) {
         Nombre = nombre;
         Apellido = apellido;
         this.edad = edad;
         this.id = ++ultimoId;
+        this.facturas = new ArrayList<>();
     }
 
     public String getNombre() {

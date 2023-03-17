@@ -181,3 +181,22 @@ javaCopy code
     stream.forEach(System.out::println); // imprime: 1 2 3 4 5 6` 
 
 En este ejemplo, usamos `**flatMap**` para transformar cada lista en un flujo de sus elementos, y luego fusionamos todos los flujos resultantes en uno solo. Luego, ordenamos los elementos del flujo resultante y los imprimimos en la consola.
+
+***293 Flatmap facturas ***
+
+Este código utiliza el stream de ***Java 8*** para realizar una serie de operaciones en una lista de usuarios y sus facturas asociadas.
+
+La lista de usuarios se representa mediante el objeto **usuarioList**. Cada usuario tiene una lista de facturas, que se obtiene llamando al método **getFacturas()** de cada usuario.
+
+El código utiliza la función map() de la clase **Stream** para transformar la lista de facturas de cada usuario en un nuevo stream de facturas. La expresión l**ambda "z->z.getFacturas()"** se encarga de realizar esta transformación.
+
+A continuación, se utiliza la función ***
+
+***flatMap() para "aplanar" el stream resultante en una única secuencia de facturas***
+
+la expresión lambda **"listafacturas ->listafacturas.stream()"**, que convierte cada lista de facturas en un nuevo **stream**.
+
+Finalmente, se utiliza la función **forEach() p**ara imprimir en la consola la descripción de cada factura y el usuario asociado a ella. La expresión lambda "***s-> System.out.println(s.getDescripcion().concat(" ").concat(s.getUsuariofactura().toString()))"*** se encarga de realizar esta tarea.
+
+***En resumen, el código utiliza el stream de Java 8 para transformar y manipular una lista de usuarios y sus facturas asociadas de una manera concisa y expresiva.***
+
